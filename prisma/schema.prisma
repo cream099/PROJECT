@@ -17,14 +17,6 @@ model Search {
   userId Int
 }
 
-model Admin {
-  adminID   Int    @id @default(autoincrement())
-  email     String
-  userAdmin String
-  phone     String
-  password  String
-}
-
 model User {
   id       Int      @id @default(autoincrement())
   email    String
