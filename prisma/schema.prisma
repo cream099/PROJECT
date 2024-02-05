@@ -75,7 +75,7 @@ model Payment {
   id            Int           @id @default(autoincrement())
   amount        Int
   paymentDate   DateTime      @map("payment_date")
-  paymentStatus PaymentStatus @map("shipment_status")
+  paymentStatus PaymentStatus 
   order         Order         @relation(fields: [orderId], references: [id])
   orderId       Int
 }
@@ -89,7 +89,7 @@ enum ShipmentStatus {
 model Shipment {
   id             Int            @id @default(autoincrement())
   shipmentDate   DateTime       @map("shipment_date")
-  shipmentStatus ShipmentStatus @map("shipment_status")
+  shipmentStatus ShipmentStatus 
   order          Order          @relation(fields: [orderId], references: [id])
   orderId        Int
 }
