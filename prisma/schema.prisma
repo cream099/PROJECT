@@ -19,9 +19,9 @@ model Search {
 
 model User {
   id       Int      @id @default(autoincrement())
-  email    String
-  phone    String
-  name     String
+  email    String   @unique
+  phone    String   @unique
+  name     String   @unique
   password String
   cart     Cart[]
   searches Search[]
